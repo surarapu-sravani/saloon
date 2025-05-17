@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hair studio</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"><link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+
+            color:white;
+          
+        }
+        .main{
+            background-image:url(https://images.pexels.com/photos/696287/pexels-photo-696287.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+            box-sizing: border-box;
+            width:100vw;
+            height:100vh;
+            object-fit: cover;
+            
+            
+            
+            
+        }
+        .navbar{
+            display:inline-flex;
+            flex-direction: row;
+            position: relative;
+            margin-top: 20px;
+            
+            
+        }
+        .nav {
+            display: flex;
+            
+            align-self: center;
+            margin-left: 500px;
+            position: relative;
+            
+          
+        }
+        .nav a{
+            margin-left:50px;
+            text-decoration: none;
+            position: relative;
+            
+        }
+        
+        .landing{
+            text-align: center;
+            margin-top: 150px;
+            padding: 20px;
+            position: relative;
+            
+        }
+        .landing h1{
+            font-family:'Kaushan Script';
+            font-weight:  600px; ;
+            font-size:120px;
+            font-display: swap;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
+            
+           
+
+        }
+        .landing p{
+            font-size: 30px;
+            font-weight: 100;
+            font-family: poppins;
+            font-style: italic;
+            color: white;
+           
+        }
+        .color-overlay{
+           height: 100vh;
+           width: 100vw;
+           background-image: linear-gradient(to top,rgb(7, 249, 245),transparent);
+           position: absolute;
+           top:0;
+           left:0;
+          
+           
+            
+            
+            
+            
+        }
+        .btn{
+            width:150px;
+            height:50px;
+            margin-top:50px;
+            margin-left: 15px;
+            color:white;
+            
+            border: 1px solid white;
+            transition: 0.5s;
+            background: linear-gradient(to right,white 50%,transparent 50% );
+            background-size: 200% 100%;
+            background-position: right;
+        }
+        .btn:hover{
+           background-position: left;
+           color: black;
+            
+        }
+        
+        .logo{
+            display: flex;
+            align-items: center;
+            margin-left: 20px;
+            
+        }
+       
+        #FEATURES{
+            background-color: white;
+            margin-top: 50px;
+            
+        }
+        .heading{
+            height:50px;
+            justify-self: center;
+            margin-right: 100px;
+            
+        }
+        .heading .leaf{
+            width:40px;
+            height:30px;
+            
+            border-radius: 100px 0px;
+            position: absolute;
+            margin:-15px;
+            background: linear-gradient(to top,#f9f9f9 5%,rgb(7, 249, 245) 50%);
+        }
+        .heading h2{
+            color:rgb(7, 249, 245);
+            position: absolute;
+            font-family:  Arial, Helvetica, sans-serif;   
+        }
+        #FEATURES h1{
+            color: black;
+            font-family:  Arial, Helvetica, sans-serif;
+            text-align: center;
+            font-size: 40px;
+            font-weight: 500;
+        }
+        .con p{
+            color:rgb(133, 136, 136);
+            display: flex;
+            padding-left: 20px;
+            padding-top: 20px;
+            font-size: 15px;
+        }
+        .con img{
+            width:70px;
+            height:70px;
+            border-radius: 15px;
+            filter: brightness(50px);
+            
+        }
+        .con{
+            display: flex;
+            
+            width:60%;
+            margin-left: 100px;
+        }
+        .image img{
+            width:400px;
+            height:500px;
+            border-radius: 40px;
+            margin-right: 200px;
+        }
+        .features{
+            display: flex;
+            margin-top: 70px;
+        }
+        .service h2{
+            color:rgb(7, 249, 245);
+            margin-left: 100px;
+            
+            font-family: poppins;
+            font-size: 25px;
+            font-weight: 500;
+            padding:10px
+            
+        }
+        #SERVICES{
+            background-color: #DDD;
+            margin-top: 50px;
+            padding-top: 50px;
+            width:100vw;
+           
+        }
+        #SERVICES h1{
+           
+            color: black;
+            font-family:  Arial, Helvetica, sans-serif;
+            text-align: center;
+            font-size: 40px;
+            font-weight: 500;
+
+        }
+        .con2{
+            padding: 50px;
+            margin-left: 100px;
+            
+        }
+        .con2 img{
+            padding: 10px;
+            border-radius: 25px;
+            width:550px;
+            height:400px;
+           
+
+        }
+        
+        .image1 .overlay{
+            text-align: center;
+            width:550px;
+            background:linear-gradient(to top ,rgb(7, 249, 245),transparent  );
+            position: absolute;
+            height:400px;
+            margin-left: 10px;
+            margin-top: 10px;
+            border-radius: 15px;
+            visibility: hidden;
+           
+
+        }
+        
+        .image1:hover .overlay{
+            visibility: visible;
+            animation:slideUp;
+            animation-duration: 1s;
+            animation-iteration-count: 1;
+            animation-direction: normal;
+            opacity: 1;
+        }
+       
+        .overlay p{
+            color:white;
+            padding:30px;
+        }
+
+        
+        .overlay h3{
+            margin-top: 50px;
+            padding:0 50px;
+            color:white;
+
+            
+        }
+        .btnn{
+            width:450px;
+            border-radius: 10px;
+            background-color: rgb(7, 180, 248);
+            height:50px;
+            margin-top: 40px;
+        }
+        .con2{
+            grid-template-columns: repeat(2,400px);
+            grid-template-rows: repeat(2,500px);
+            display: flex;
+        }
+        #TESTIMONIALS{
+            background-color:white;
+            width:100vw;
+            margin-top: 50px;
+            padding-top: 50px;
+        }
+        #TESTIMONIALS h1{
+           
+           color: black;
+           font-family:  Arial, Helvetica, sans-serif;
+           text-align: center;
+           font-size: 40px;
+           font-weight: 500;
+
+       }
+       .testimonial{
+       display: flex;
+        width:100%;
+        height:100%;
+        padding: 50px;
+        background-color: white;
+        
+       }
+       .test-card{
+        width:max-content;
+        height:max-content;
+        box-shadow: 0 0 8px 8px #fafafa;
+        border-radius: 5px;
+        margin: 20px;
+        background-color: white;
+       }
+       
+       
+
+       
+       .prof-img{
+        width:50px;
+        height:50px;
+        border-radius: 50%;
+
+       }
+       .prof2 span,p{
+        color:rgb(30, 28, 28);
+        
+        margin: 0px 0px ;
+        text-align: left;
+        
+       }
+       .prof2 span{
+        font-weight: 600;
+       }
+       .prof{
+        display: flex;
+        margin-top: 50px;
+        padding:5px;
+       
+       }
+       
+       .prof2 img{
+        width:30px;
+       }
+       .prof2{
+        display: flex;
+        
+       }
+       .overlay .but{
+       
+        border: transparent;
+        border-bottom: 2px solid white;
+        width:200px;
+        background-color: transparent;
+        height:100px;
+        width:300px;
+       }
+      
+       .test-card .test-details{
+        margin: 10px 25px;
+        font-family: poppins;
+        color:rgb(30, 28, 28);
+       }
+       
+        
+    </style>
+</head>
+<body>
+    <header>
+            <div class="color-overlay"></div>
+            <div class="main">
+                <div class="navbar">
+                    <div class="logo">
+                        <img src="https://vikasthakurr.github.io/Bookmysallonbyvikas/logo.png" alt="">
+                        
+                    </div>
+                    <section class="nav">
+                        <a href="#HOME">HOME</a>
+                        <a href="#FEATURES">FEATURES</a>
+                        <a href="#SERVICES">SERVICES</a>
+                        <a href="#TESTIMONIALS">TESTIMONIALS</a>
+                        <a href="#MEET US">MEET US</a>
+                        <a href="#ACCOUNT">ACCOUNT</a>
+
+                    </section>
+
+                </div>
+                <div class="landing">
+                    <h1>Hair Studio</h1>
+                    <p>we are here to provide the best treatment  and caring for your lovely hair</p>
+                    <button class="btn">find out</button>
+                    <button class="btn"> Read more</button>
+
+                
+
+                </div>
+            </div> 
+    </header>
+    <section id="FEATURES">
+        <div class="heading">
+            <div class="leaf"></div>
+            <div><h2>FEATURES</h2></div>
+        </div>
+        <h1>Why you choose Us</h1>
+        <div class="features">
+            
+            <div class="service">
+                <h2>Experienced Staff</h2>
+                <div class="con">
+                    <div><img src="data:image/png;base64,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"></div>
+                    <div><p>We got the best staff in the town to take care of your beautifull hair. We have vast Experienced hair stylist.</p></div>                
+                </div>
+                <h2>Experienced Staff</h2>
+                <div class="con">
+                    <div><img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSXshZ1AOl4VF71aMF3JSBxvvvM8qLWYsCOMbTeo2fy-PqKYjDC"></div>
+                    <div><p>We got the best staff in the town to take care of your beautifull hair. We have vast Experienced hair stylist.</p></div>                
+                </div>
+                <h2>Experienced Staff</h2>
+                <div class="con">
+                    <div><img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSpX-aVT-A5dRabh51xQma69lSzEH-_EQTUv-pFrw_SQ9YSqG3s"></div>
+                    <div><p>We got the best staff in the town to take care of your beautifull hair. We have vast Experienced hair stylist.</p></div>                
+                </div>
+
+            </div>
+            <div class="image">
+                <div><img  src="https://vikasthakurr.github.io/Bookmysallonbyvikas/barber-man.jpg"></div>
+                
+            </div>
+
+
+        </div>
+    </section>
+    <section id="SERVICES">
+        <div class="heading">
+            <div class="leaf"></div>
+            <div><h2>SERVICES</h2></div>
+        </div>
+        <h1>We Provide Best In Town</h1>
+        <div class="con2">
+            <div>
+                <div class="image1">
+                    <div class="overlay">
+                        <button class="but"><h3>Hair Styling</h3></button>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut voluptas aspernatur unde quidem. Consectetur facere eveniet quo, at aperiam sit ipsa assumenda asperiores earum placeat repellendus? Et ipsam sapiente molestiae!</p>
+                        <button class="btnn">Book Nw</button>
+                    </div>
+                    <div><img src="https://vikasthakurr.github.io/Bookmysallonbyvikas/pic-1.jpg"></div>
+                    
+                </div>
+                
+                <div class="image1">
+                    <div class="overlay">
+                        <button class="but"><h3>Beard trimming</h3></button>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut voluptas aspernatur unde quidem. Consectetur facere eveniet quo, at aperiam sit ipsa assumenda asperiores earum placeat repellendus? Et ipsam sapiente molestiae!</p>
+                        <button class="btnn">Book Nw</button>
+                    </div>
+                    <div><img src="https://vikasthakurr.github.io/Bookmysallonbyvikas/pic-2.jpg"></div>
+                    
+                </div>
+                </div>
+                <div>
+                <div class="image1">
+                    <div class="overlay">
+                        <button class="but"><h3>Hair Cut</h3></button>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut voluptas aspernatur unde quidem. Consectetur facere eveniet quo, at aperiam sit ipsa assumenda asperiores earum placeat repellendus? Et ipsam sapiente molestiae!</p>
+                        <button class="btnn">Book Nw</button>
+                    </div>
+                    <div><img src="https://vikasthakurr.github.io/Bookmysallonbyvikas/pic-3.jpg"></div>
+                    
+                </div>
+                <div class="image1">
+                    <div class="overlay">
+                        <button class="but"><h3>Dry Shampoo</h3></button>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut voluptas aspernatur unde quidem. Consectetur facere eveniet quo, at aperiam sit ipsa assumenda asperiores earum placeat repellendus? Et ipsam sapiente molestiae!</p>
+                        <button class="btnn">Book Nw</button>
+                    </div>
+                    <div><img src="https://vikasthakurr.github.io/Bookmysallonbyvikas/pic-4.jpg"></div>
+                    
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <section id="TESTIMONIALS">
+        <div class="heading">
+            <div class="leaf"></div>
+            <div><h2>TESTIMONIALS</h2></div>
+        </div>
+        <h1>What Client Says</h1>
+        <div class="testimonial">
+            <div class="test-card">
+                <div class="prof">
+                    <div><img class="prof-img" src="https://vikasthakurr.github.io/Bookmysallonbyvikas/main.png"></div>
+                    <div class="prof2">
+                       
+                            <p><span>Abc  </span> <img src="https://tse2.mm.bing.net/th?id=OIP.PXTov9TveYX3Upu592UOygHaHa&pid=Api&P=0&h=180"><br>@abc </p>
+                        
+                        
+                    </div>
+                </div>
+                <div class="test-details">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita nisi laborum quasi vel ab pariatur ipsam cumque ea facilis, tenetur nostrum aliquid? Exercitationem ullam magnam ipsa, dolores iusto nesciunt autem.</p>
+                </div>
+                
+            </div>
+            <div class="test-card">
+                <div class="prof">
+                    <div><img class="prof-img" src="https://vikasthakurr.github.io/Bookmysallonbyvikas/main.png"></div>
+                    <div class="prof2">
+                       
+                            <p><span>Abc  </span> <img src="https://tse2.mm.bing.net/th?id=OIP.PXTov9TveYX3Upu592UOygHaHa&pid=Api&P=0&h=180"><br>@abc </p>
+                        
+                        
+                    </div>
+                </div>
+                <div class="test-details">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita nisi laborum quasi vel ab pariatur ipsam cumque ea facilis, tenetur nostrum aliquid? Exercitationem ullam magnam ipsa, dolores iusto nesciunt autem.</p>
+                </div>
+                
+            </div>
+            <div class="test-card">
+                <div class="prof">
+                    <div><img class="prof-img" src="https://vikasthakurr.github.io/Bookmysallonbyvikas/main.png"></div>
+                    <div class="prof2">
+                       
+                            <p><span>Abc  </span> <img src="https://tse2.mm.bing.net/th?id=OIP.PXTov9TveYX3Upu592UOygHaHa&pid=Api&P=0&h=180"><br>@abc </p>
+                        
+                        
+                    </div>
+                </div>
+                <div class="test-details">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita nisi laborum quasi vel ab pariatur ipsam cumque ea facilis, tenetur nostrum aliquid? Exercitationem ullam magnam ipsa, dolores iusto nesciunt autem.</p>
+                </div>
+                
+            </div>
+
+        </div>
+
+    </section>
+</body>
+</html>
